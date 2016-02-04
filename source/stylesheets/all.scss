@@ -1,0 +1,116 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+.absolutePosition {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  font-size: 18px;
+}
+
+body {
+  background-color: #eee;
+  & > section:nth-child(1) {
+    width: 350px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  & > section:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 50;
+  }
+}
+
+h1 {
+ margin-bottom: 5px;
+ font-weight: normal;
+ font-size: 18px;
+}
+
+div {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  input, select {
+    margin-bottom: 20px;
+  }
+  input[type=range] {
+    width: 100%;
+  }
+  input[type=number] {
+    width: 100%;
+    font-size: 18px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  select, option {
+    width: 100%;
+    -webkit-appearance: none;
+    font-size: 16px !important;
+    padding: 5px;
+  }
+  #draw {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #7d7d7d;
+    border: 0;
+    margin-bottom: 50px;
+    color: white;
+    cursor: pointer;
+    font-weight: normal;
+  }
+}
+
+canvas {
+  @extend .absolutePosition;
+  margin-right: calc(-50% - 175px);
+  &#canvas2 {
+    transition: all 0.5s;
+  }
+}
+
+.image {
+  width: 800px;
+  height: 800px;
+  @extend .absolutePosition;
+  overflow: hidden;
+}
+
+.base, .overlay {
+  width: 100%;
+  height: auto;
+  @extend .absolutePosition;
+}
+
+.base {
+  z-index: 10;
+}
+
+.overlay {
+  transition: all 0.5s;
+  z-index: 100;
+}
