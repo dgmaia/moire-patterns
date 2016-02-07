@@ -4,7 +4,10 @@ title: Freaky Dot Patterns
 
 <section>
     <div>
-        <h1>Select pattern</h1>
+        <h1>Freaky Dot Patterns</h1>
+        <p>Inspired by this <a href="https://www.youtube.com/watch?v=QAja2jp1VjE" target="_blank">video</a> from Numberphile.</p>
+        <hr/>
+        <h2>Select pattern</h2>
         <select id="type" class="values">
             <optgroup>
                 <option value="random2">Random</option>
@@ -14,16 +17,20 @@ title: Freaky Dot Patterns
                 <option value="circle">Circles</option>
             </optgroup>
         </select>
-        <h1>Enter size</h1>
-        <input id="canvas-size" type="number" min="3" max="100" value="50" step="1">
+        <h2>Enter size</h2>
+        <input id="canvas-size" type="number" min="3" max="100" value="6" step="1">
         <button type="submit" id="draw">Create</button>
-        <h1>Rotate</h1>
-        <input id="range" type="range" min="0" max="360" value="00" step="0.5" class="values">
-        <h1>Move X</h1>
+        <p>After the pattern is created, use keys up/down to slowly increment the fields below</p>
+        <hr/>
+        <h2>Rotate</h2>
+        <input id="range" type="number" min="0" max="180" value="00" step="0.2" class="values">
+        <h2>Move X</h2>
         <input id="x-value" type="number" min="-800" max="800" value="0" step="1" class="values">
-        <h1>Move Y</h1>
+        <h2>Move Y</h2>
         <input id="y-value" type="number" min="-800" max="800" value="0" step="1" class="values">
+        <h2>Scale</h2>
         <input id="size-value" type="number" min="-10" max="10" value="1" step="0.01" class="values">
+        <p><a href="https://github.com/dgmaia/moire-patterns" target="_blank">GitHub</a></p>
     </div>
 </section>
 <section>
